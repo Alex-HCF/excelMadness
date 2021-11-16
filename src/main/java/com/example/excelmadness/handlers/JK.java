@@ -21,11 +21,12 @@ public class JK implements Proto {
                         throw (new Exception());
                     }
                 } catch (Exception e) {
-                    listString.set(listString.indexOf(str), "####" + str);
+//                    listString.set(listString.indexOf(str), "####" + str);
+                    listString.set(listString.indexOf(str), "**<font color=\"531a13\" size=3>" + str + "</font>**");
                 }
             }
         }
 
-        return listString.stream().collect(Collectors.joining("\n"));
+        return String.join("\n", listString);
     }
 }
